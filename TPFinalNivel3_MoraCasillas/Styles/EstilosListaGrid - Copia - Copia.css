@@ -1,0 +1,257 @@
+﻿/* Estilos para la tabla */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.title{
+    padding-left:10px;
+    
+}
+    .custom-table th,
+    .custom-table td {
+        padding: 0.75rem;
+        text-align: left;
+        border: 1px solid #dee2e6;
+        white-space: nowrap;
+    }
+
+    .custom-table th {
+        background-color: white;
+    }
+
+    .custom-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .custom-table tr:hover {
+        background-color: #e9ecef;
+    }
+
+    /* Estilos para el ícono y botón de acción */
+    .custom-table .btn-link {
+        color: black;
+        text-decoration: none;
+    }
+
+        .custom-table .btn-link:hover {
+            color: #007bff;
+        }
+
+/* Estilos para el contenedor de botones */
+.button-container {
+    display: flex; /* Usar Flexbox */
+    justify-content: space-between; /* Separar botones a los extremos */
+    align-items: center; /* Centrar verticalmente */
+    margin-top: 1rem; /* Margen superior para separación */
+}
+
+/* Estilo para el enlace Agregar */
+.btn-Agregar {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: black;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-Agregar:hover {
+        background-color: #545656;
+    }
+
+/* Estilo para el contenedor de los botones secundarios */
+.secondary-buttons {
+    display: flex; /* Usar Flexbox para los botones secundarios */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/* Estilo para los botones de Agregar Marca y Agregar Categoría */
+.btn-Marca, .btn-Categoria {
+    background-color: black; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 9px 15px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    transition: background-color 0.3s ease; /* Efecto de transición */
+}
+
+    /* Efecto hover para Agregar Marca */
+    .btn-Marca:hover {
+        background-color: #007BFF;
+    }
+
+    /* Efecto hover para Agregar Categoría */
+    .btn-Categoria:hover {
+        background-color: #007BFF;
+    }
+
+/* Otros estilos (sin cambios) */
+.text-danger {
+    color: red; /* Color por defecto */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+    .text-danger:hover {
+        color: darkred; /* Color al hacer hover */
+    }
+
+.btn-eliminar i {
+    color: black;
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+}
+
+.btn-eliminar:hover i {
+    color: red; /* Color rojo en hover */
+}
+
+/* Estilos para la alerta personalizada */
+.custom-confirm {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que la alerta esté por encima de otros elementos */
+}
+
+.custom-confirm-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+}
+
+    .custom-confirm-content p {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+.btn-confirm, .btn-cancel {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px; /* Espacio entre botones */
+}
+
+.btn-confirm {
+    background-color: #dc3545; /* Color rojo */
+    color: #fff;
+}
+
+.btn-cancel {
+    background-color: #6c757d; /* Color gris */
+    color: #fff;
+}
+
+/* Efecto al pasar el mouse sobre los botones */
+.btn-confirm:hover {
+    background-color: #c82333; /* Color más oscuro para el hover */
+}
+
+.btn-cancel:hover {
+    background-color: #5a6268; /* Color más oscuro para el hover */
+}
+
+
+
+/* Aquí va la parte del filtro de la aplicación*/
+/* Estilos para el contenedor del formulario de filtros */
+.filter-container {
+    display: flex; /* Usar Flexbox para diseño horizontal */
+    flex-wrap: wrap; /* Permitir el ajuste en varias líneas si es necesario */
+    gap: 1rem; /* Espacio entre los elementos */
+    align-items: center; /* Alinear verticalmente en el centro */
+    margin-bottom: 4rem; /* Margen inferior para separación */
+}
+
+    /* Estilo para los grupos de entrada dentro del contenedor */
+    .filter-container .input-group {
+        flex: 1; /* Permitir que los elementos crezcan para ocupar el espacio disponible */
+        min-width: 150px; /* Ancho mínimo para evitar que se reduzcan demasiado */
+    }
+
+    /* Estilo para las etiquetas del formulario */
+    .filter-container label {
+        margin-bottom: 0.5rem; /* Espacio debajo de la etiqueta */
+        display: block; /* Mostrar la etiqueta como bloque */
+        font-weight: bold; /* Hacer la fuente en negrita */
+    }
+
+    /* Estilo para el botón de búsqueda */
+    .filter-container .btnBuscar {
+        background-color: black; /* Color de fondo del botón */
+        color: white; /* Color del texto */
+        border: none; /* Sin borde */
+        border-radius: 0.25rem; /* Bordes redondeados */
+        padding: 0.5rem 1rem; /* Espaciado interno */
+        cursor: pointer; /* Cambiar cursor al pasar el mouse */
+        transition: background-color 0.3s ease; /* Transición para el efecto hover */
+    }
+
+        .filter-container .btnBuscar:hover {
+            background-color: #545656; /* Color de fondo al pasar el mouse */
+        }
+
+
+
+    /* Estilo para las etiquetas del formulario */
+    .filter-container label {
+        margin-bottom: 0.5rem; /* Espacio debajo de la etiqueta */
+        display: block; /* Mostrar la etiqueta como bloque */
+        font-weight: bold; /* Fuente en negrita */
+        font-size: 0.875rem; /* Tamaño de fuente adecuado */
+        color: #333; /* Color de texto oscuro para mejor legibilidad */
+        margin-right: 1rem; /* Espacio a la derecha de la etiqueta */
+    }
+
+    /* Estilo para los grupos de entrada dentro del contenedor */
+    .filter-container .input-group {
+        flex: 1; /* Permitir que los elementos crezcan para ocupar el espacio disponible */
+        min-width: 150px; /* Ancho mínimo para evitar que se reduzcan demasiado */
+    }
+
+    /* Estilo para el TextBox */
+    .filter-container .form-control {
+        padding: 0.5rem; /* Espaciado interno del TextBox */
+        border: 1px solid #ced4da; /* Borde gris claro */
+        border-radius: 0.25rem; /* Bordes redondeados */
+        font-size: 1rem; /* Tamaño de la fuente */
+        width:300px;
+        color: #495057; /* Color de texto gris oscuro */
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra interna ligera */
+        transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    }
+
+        .filter-container .form-control:focus {
+            border-color: #007bff; /* Color del borde al enfocar */
+            box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Sombra azul al enfocar */
+            outline: none; /* Eliminar el borde de enfoque predeterminado */
+        }
+
+    /* Estilo para el botón de búsqueda */
+    .filter-container .btnBuscar {
+        background-color: black; /* Color de fondo del botón */
+        color: white; /* Color del texto */
+        border: none; /* Sin borde */
+        border-radius: 0.25rem; /* Bordes redondeados */
+        padding: 0.5rem 1rem; /* Espaciado interno */
+        cursor: pointer; /* Cambiar cursor al pasar el mouse */
+        transition: background-color 0.3s ease; /* Transición para el efecto hover */
+    }
+
+        .filter-container .btnBuscar:hover {
+            background-color: #545656; /* Color de fondo al pasar el mouse */
+        }

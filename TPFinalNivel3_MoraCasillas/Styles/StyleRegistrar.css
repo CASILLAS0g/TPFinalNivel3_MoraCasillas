@@ -1,0 +1,119 @@
+﻿body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/*Este es el logo*/
+
+.header {
+    position: fixed;
+    background-color: #3483fa;
+    font-size: 2rem;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0; /* Asegúrate de que haya suficiente espacio para el contenido */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    left: 0; /* Agregamos left para que este pegado de izquierda a derecha */
+}
+
+
+
+.logo-container {
+   margin-left: 300px;
+}
+
+
+
+.logo-icon {
+    color: white;
+}
+   
+.LogoLetra {
+    color:white ;
+}
+
+
+
+
+/* Este es el formulario de inicio de sesión*/
+h1 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.main-container {
+    flex-direction: column;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: white;
+    padding: 40px;
+    width: 500px;
+    border: solid 0.5px #bdbebf;
+}
+
+.content-label {
+    font-size: 0.8rem;
+    color: black;
+    margin-top: 10px;
+}
+
+.content-email-pass {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 13px 12px;
+    border: solid 1px #bdbebf;
+    border-radius: 5px;
+    gap: 10px;
+    font-size: 15px;
+}
+
+    .content-email-pass:focus {
+        border: solid 1px #3483fa;
+        outline: none;
+    }
+    
+    /* Contiene los botones*/
+.content-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    gap: 50px;
+}
+
+.btn {
+    background-color: #3483fa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 13px;
+    margin: 0px 8px 0px 0px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    flex: 1;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.btn-Continuar:hover {
+    background-color: #066ed2;
+}
+
+.btn-Regresar {
+    background-color: white;
+    color: #3483fa;
+}
+
+    .btn-Regresar:hover {
+        background-color: rgba(52, 131, 250, 0.1);
+    }

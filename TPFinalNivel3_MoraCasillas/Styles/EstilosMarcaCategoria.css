@@ -1,0 +1,65 @@
+﻿
+body {
+    font-family: Arial, sans-serif;
+    background-color: #262627;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.custom-confirm {
+    background-color: #eeeef1;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 60px; /* Aumentar el padding */
+    text-align: center;
+    width: 700px; /* Aumentar el ancho */
+}
+
+.custom-confirm-content {
+    margin-bottom: 20px;
+    font-size: 40px; /* Aumentar el tamaño de la fuente */
+}
+
+.textBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 100%;
+    color: black;
+    border: none;
+    margin-bottom: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+.btn-confirmar, .btn-cancelar {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px; /* Aumentar el padding de los botones */
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 25px; /* Aumentar el tamaño de la fuente */
+}
+
+    .btn-confirmar:hover {
+        background-color: #8a8686;
+    }
+
+.btn-cancelar {
+    background-color: #dc3545;
+}
+
+    .btn-cancelar:hover {
+        background-color: #8a8686;
+    }

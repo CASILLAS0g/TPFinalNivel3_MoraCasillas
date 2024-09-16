@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CatalogoWeb.master.cs" Inherits="TPFinalNivel3_MoraCasillas.CatalogoWeb" %>
+
+<!DOCTYPE html>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link href="Styles/StyleMaster%20-%20Copia%20-%20Copia.css" rel="stylesheet" />
+<html>
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Catálogo WEB</title>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+
+        <header class="header">
+            <div class="main-container">
+                <div class="logo-container">
+                    <itemtemplate>
+                        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn-link" BorderStyle="None" OnClick="LinkButton1_Click" Style="color: black;">
+                            <i class="fa-solid fa-shop  logo-icon" ></i>
+                            <asp:Label Text="GigaShop" runat="server" ID="logoLabel" CssClass="LogoLetra" BorderStyle="None" />
+                        </asp:LinkButton>
+                    </itemtemplate>
+                </div>
+            </div>
+
+
+
+            <div class="input-group">
+                <asp:TextBox ID="txtBuscar" runat="server" CssClass="search-input" placeholder="Buscar productos..." AutoPostBack="true" OnTextChanged="txtBuscar_TextChanged" />
+                <%-- <asp:Button ID="btnBuscar" runat="server" Text="" CssClass="search-button" icon="" />--%>
+                <a href="#" class="search-button" id="btnBuscar">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+                    <!-- Aquí puedes usar un ícono de tu elección -->
+                </a>
+
+            </div>
+            <nav class="nav-bar">
+                <a class="a" href="Catalogo.aspx">Inicio</a>
+              
+
+
+                <%if (!negocio.Seguridad.esAdmin(Session["usuarios"]))
+                    { %>
+
+                <%
+                    }
+                    else
+                    {
+                %>
+                <a class="a" href="Lista.aspx">AdministarLista</a>
+                <%  }  %>
+
+                <%if (!negocio.Seguridad.sesionActiva(Session["usuarios"]))
+                    { %>
+
+                <a class="a" href="Inicio.aspx">Inicia sesión</a>
+
+                <%
+                    }
+                    else
+                    {
+                %>
+                <style>
+                    .btn-cerrar {
+                        border: none;
+                        margin-right: 20px;
+                        transition: background-color 0.3s;
+                        cursor: pointer;
+                    }
+
+                        .btn-cerrar:hover {
+                            background-color: black;
+                            color: rgba(255, 255, 255, 0.5);
+                        }
+                </style>
+                  <a class="a" href="Perfil.aspx">Perfil</a>
+                <asp:Button Text="Salir" ID="btnSalir" runat="server" CssClass="a btn-cerrar" OnClick="btnSalir_Click" />
+
+                <%  }  %>
+
+                
+               
+                <asp:Image ID="imagenPerfilMaster" runat="server" ImageUrl="https://saberescincopuntocero.com/wp-content/uploads/2020/10/PERFIL-VACIO-300x300.png"
+ 
+                Style="width: 50px; /* ajusta el tamaño según tus necesidades */
+                height: 50px; /* ajusta el tamaño según tus necesidades */
+                border-radius: 50%; /* hace que la imagen sea circular */
+                object-fit: contain; /* asegura que la imagen se ajuste dentro del círculo */
+                border:none; /* añade un borde alrededor de la imagen */
+                transition: transform 0.3s, box-shadow 0.3s; /* efecto de transición para hover */
+                margin-right: 20px;" />
+
+            </nav>
+        </header>
+
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+    </form>
+</body>
+</html>
+

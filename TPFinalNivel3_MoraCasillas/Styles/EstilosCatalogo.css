@@ -1,0 +1,101 @@
+﻿
+/* Contenedor de las tarjetas */
+.tarjeta-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 30px; /* Espacio entre tarjetas */
+    margin: 20px auto; /* Centra el contenedor horizontalmente */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    padding: 0 20px; /* Espacio a los lados del contenedor */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Estilos de la tarjeta */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s;
+    width: 100%; /* Ancho completo del contenedor de la tarjeta */
+    height: 500px; /* Altura fija de la tarjeta */
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Necesario para el posicionamiento del botón */
+}
+
+    .card:hover {
+        transform: translateY(-10px); /* Efecto de elevación al pasar el mouse */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Más sombra para el efecto de elevación */
+    }
+
+.card-imagen {
+    width: 100%;
+    height: 400px; /* Altura fija para el contenedor de la imagen */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga */
+}
+
+    .card-imagen img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* La imagen cubre el contenedor */
+    }
+
+.card-content {
+    padding: 15px;
+    flex: 1; /* Permite que el contenido crezca para llenar el espacio disponible */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.card-footer {
+    padding: 19px; /* Asegura que el pie de página tenga suficiente espacio */
+    background-color: #fff;
+    text-align: center;
+    position: relative; /* Necesario para la posición absoluta del botón */
+}
+
+.card-button {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 0;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%; /* Ocupa toda la base del pie de página */
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+    position: absolute; /* Posiciona el botón en la base del pie de página */
+    bottom: 0;
+    left: 0;
+    opacity: 0; /* Oculta el botón por defecto */
+    visibility: hidden; /* También oculta el botón visualmente */
+    transition: opacity 0.3s, visibility 0.3s; /* Transición suave para el botón */
+}
+
+.card:hover .card-button {
+    opacity: 1; /* Muestra el botón al pasar el ratón sobre la tarjeta */
+    visibility: visible; /* Hace que el botón sea visible */
+    background-color: black;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .tarjeta-container {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
